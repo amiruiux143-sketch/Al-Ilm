@@ -340,7 +340,7 @@ const App = {
             <div class="card-lg" style="margin-bottom:15px;" onclick="App.openLessons('${c.name}', '${c.url}')">
                 <div style="display:flex; gap:20px; align-items:center;">
                     <div class="icon-box"><i class="fa-solid ${c.icon}"></i></div>
-                    <div><div class="card-title">${c.name}</div><div class="card-sub">${c.sub} • 25 уроков</div></div>
+                    <div><div class="card-title">${c.name}</div><div class="card-sub">${c.sub} • уроки</div></div>
                 </div>
             </div>`).join('');
     },
@@ -349,12 +349,12 @@ const App = {
         this.nav('lessons');
         const box = document.getElementById('lessons-view');
         let html = `<div onclick="App.nav('academy')" style="margin-bottom:20px; font-weight:800; color:var(--accent)">← Назад</div><h2>${title}</h2><br>`;
-        for(let i=1; i<=25; i++) {
+        for(let i=1; i<=1; i++) {
             html += `
                 <div class="lesson-row" onclick="window.open('${playlistUrl}', '_blank')">
                     <div class="lesson-id">${i}</div>
                     <div style="flex:1">
-                        <div class="card-title" style="font-size:16px;">Видео урок №${i}</div>
+                        <div class="card-title" style="font-size:16px;">Плейст уроков</div>
                         <div class="card-sub">Нажмите, чтобы смотреть на YouTube</div>
                     </div>
                     <i class="fa-solid fa-circle-play" style="color:var(--accent); font-size:24px;"></i>
