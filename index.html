@@ -470,7 +470,7 @@ const App = {
                 const res = await fetch(`https://api.aladhan.com/v1/timings?latitude=${pos.coords.latitude}&longitude=${pos.coords.longitude}&method=2`);
                 const d = await res.json();
                 const t = d.data.timings;
-                const names = {Fajr:'Фаджр', Sunrise:'Восход', Dhuhr:'Зухр', Asr:'Аср', Maghrib:'Магриб', Isha:'Иша'};
+                const names = {Fajr:'Фаджр', Sunrise:'Шурук', Dhuhr:'Зухр', Asr:'Аср', Maghrib:'Магриб', Isha:'Иша'};
                 let html = '<div class="prayer-list">';
                 for(let key in names) html += `<div class="prayer-item"><span>${names[key]}</span><span>${t[key]}</span></div>`;
                 html += '</div>';
